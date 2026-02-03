@@ -36,7 +36,7 @@ const Login = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
             </div>
-            <span className="text-white font-bold text-2xl">TaskFlow</span>
+            <span className="text-white font-bold text-2xl">Echo</span>
           </div>
         </div>
         <div className="space-y-6">
@@ -44,7 +44,7 @@ const Login = () => {
             Organize your work,<br />simplify your life.
           </h1>
           <p className="text-purple-200 text-lg">
-            Join thousands of users who trust TaskFlow to manage their daily tasks efficiently.
+            Join thousands of users who trust Echo to manage their daily tasks efficiently.
           </p>
           <div className="flex items-center space-x-4 pt-4">
             <div className="flex -space-x-2">
@@ -56,7 +56,7 @@ const Login = () => {
           </div>
         </div>
         <div className="text-purple-300 text-sm">
-          © 2026 TaskFlow. All rights reserved.
+          © 2026 Echo. All rights reserved.
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const Login = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
-              <span className="text-gray-900 font-bold text-xl">TaskFlow</span>
+              <span className="text-gray-900 font-bold text-xl">Echo</span>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">
               Welcome back

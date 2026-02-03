@@ -84,10 +84,10 @@ const Home = () => {
   };
 
   const filterConfig = [
-    { key: 'all', label: 'All Tasks', icon: '📋' },
-    { key: 'pending', label: 'Pending', icon: '🕐' },
-    { key: 'in_progress', label: 'In Progress', icon: '⚡' },
-    { key: 'completed', label: 'Completed', icon: '✓' },
+    { key: 'all', label: 'All Tasks'},
+    { key: 'pending', label: 'Pending'},
+    { key: 'in_progress', label: 'In Progress', },
+    { key: 'completed', label: 'Completed'},
   ];
 
   if (loading) {
@@ -128,46 +128,34 @@ const Home = () => {
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
+            <div className="text-center">
               <div>
-                <p className="text-sm text-gray-500 font-medium">Total</p>
+                <p className="text-2xl text-gray-900 font-semibold">Total</p>
                 <p className="text-2xl font-bold text-gray-900">{taskCounts.all}</p>
               </div>
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                <span className="text-xl">📋</span>
-              </div>
             </div>
           </div>
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
+            <div className="text-center">
               <div>
-                <p className="text-sm text-gray-500 font-medium">Pending</p>
+                <p className="text-2xl text-gray-900 font-semibold">Pending</p>
                 <p className="text-2xl font-bold text-amber-600">{taskCounts.pending}</p>
               </div>
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                <span className="text-xl">🕐</span>
-              </div>
             </div>
           </div>
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
+            <div className="text-center">
               <div>
-                <p className="text-sm text-gray-500 font-medium">In Progress</p>
+                <p className="text-2xl text-gray-900 font-semibold">In Progress</p>
                 <p className="text-2xl font-bold text-blue-600">{taskCounts.in_progress}</p>
               </div>
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                <span className="text-xl">⚡</span>
-              </div>
             </div>
           </div>
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div className="flex items-center justify-between">
+            <div className="text-center">
               <div>
-                <p className="text-sm text-gray-500 font-medium">Completed</p>
+                <p className="text-2xl text-gray-900 font-semibold">Completed</p>
                 <p className="text-2xl font-bold text-emerald-600">{taskCounts.completed}</p>
-              </div>
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                <span className="text-xl">✓</span>
               </div>
             </div>
           </div>

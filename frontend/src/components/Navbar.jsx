@@ -32,7 +32,7 @@ const Navbar = () => {
               </svg>
             </div>
             <Link to="/" className="text-white font-bold text-xl tracking-tight">
-              TaskFlow
+              Echo
             </Link>
           </div>
           <div className="flex items-center space-x-4">

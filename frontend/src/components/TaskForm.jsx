@@ -40,9 +40,9 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
   };
 
   const statusOptions = [
-    { value: 'pending', label: 'Pending', icon: '🕐', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-    { value: 'in_progress', label: 'In Progress', icon: '⚡', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-    { value: 'completed', label: 'Completed', icon: '✓', color: 'bg-emerald-50 border-emerald-200 text-emerald-700' },
+    { value: 'pending', label: 'Pending', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+    { value: 'in_progress', label: 'In Progress', color: 'bg-blue-50 border-blue-200 text-blue-700' },
+    { value: 'completed', label: 'Completed', color: 'bg-emerald-50 border-emerald-200 text-emerald-700' },
   ];
 
   return (
