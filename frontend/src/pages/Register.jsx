@@ -51,14 +51,6 @@ const Register = () => {
       {/* Left Side - Decorative */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 p-12 flex-col justify-between">
         <div>
-          <div className="flex items-center space-x-3">
-            <div className="bg-white/20 p-2 rounded-lg">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-            </div>
-            <span className="text-white font-bold text-2xl">Echo</span>
-          </div>
         </div>
         <div className="space-y-6">
           <h1 className="text-4xl font-bold text-white leading-tight">
