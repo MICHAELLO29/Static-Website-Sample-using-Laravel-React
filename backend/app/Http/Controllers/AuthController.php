@@ -58,11 +58,58 @@ class AuthController extends Controller
         return response()->json(auth('api')->user());
     }
 
+    public function index()
+    {
+        $users = User::all(['id', 'name', 'email', 'created_at']);
+        return response()->json($users);
+    }
+
     public function logout()
     {
         auth('api')->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
+    }
+
+    public function update(Request $request)
+    {
+        $user = auth('api')->user();
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'sometimes|string|max:255',
+            'email' => 'sometimes|string|email|max:255|unique:users,email,' . $user->id,
+            'password' => 'sometimes|string|min:6|confirmed',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        if ($request->has('name')) {
+            $user->name = $request->name;
+        }
+        if ($request->has('email')) {
+            $user->email = $request->email;
+        }
+        if ($request->has('password')) {
+            $user->password = Hash::make($request->password);
+        }
+
+        $user->save();
+
+        return response()->json([
+            'message' => 'User updated successfully',
+            'user' => $user
+        ]);
+    }
+
+    public function destroy()
+    {
+        $user = auth('api')->user();
+        auth('api')->logout();
+        $user->delete();
+
+        return response()->json(['message' => 'User deleted successfully']);
     }
 
     protected function respondWithToken($token)

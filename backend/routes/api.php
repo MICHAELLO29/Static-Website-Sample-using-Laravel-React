@@ -12,5 +12,8 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/me', [AuthController::class, 'me']);
+    Route::put('/me', [AuthController::class, 'update']);
+    Route::delete('/me', [AuthController::class, 'destroy']);
+    Route::get('/users', [AuthController::class, 'index']);
     Route::apiResource('tasks', TaskController::class);
 });
