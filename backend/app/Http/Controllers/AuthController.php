@@ -64,6 +64,16 @@ class AuthController extends Controller
         return response()->json($users);
     }
 
+    public function destroyAll()
+    {
+        $count = User::count();
+        User::truncate();
+        return response()->json([
+            'message' => "All users deleted successfully",
+            'deleted_count' => $count
+        ]);
+    }
+
     public function logout()
     {
         auth('api')->logout();

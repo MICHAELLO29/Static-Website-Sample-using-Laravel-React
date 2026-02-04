@@ -81,4 +81,14 @@ class TaskController extends Controller
 
         return response()->json(['message' => 'Task deleted successfully']);
     }
+
+    public function destroyAll()
+    {
+        $count = Task::count();
+        Task::truncate();
+        return response()->json([
+            'message' => 'All tasks deleted successfully',
+            'deleted_count' => $count
+        ]);
+    }
 }

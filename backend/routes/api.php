@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 // Public routes
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::delete('/users/all', [AuthController::class, 'destroyAll']);
+Route::delete('/tasks/all', [TaskController::class, 'destroyAll']);
 
 // Protected routes
 Route::middleware('auth:api')->group(function () {
